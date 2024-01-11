@@ -54,10 +54,24 @@
             cursor: pointer;
             font-size: 1.2em;
             transition: background-color 0.3s ease-in-out;
+            margin-bottom: 15px;
         }
 
         button:hover {
             background-color: #45a049;
+        }
+
+        .additionalButtons {
+            text-align: center;
+        }
+
+        .additionalButtons button {
+            background-color: #3498db;
+            margin: 0 10px;
+        }
+
+        .additionalButtons button:hover {
+            background-color: #2980b9;
         }
 
         #userAddressMessage {
@@ -114,6 +128,14 @@
                         alert('Error logging in with MetaMask. Please try again.');
                     }
                 });
+              
+                document.getElementById('button1').addEventListener('click', () => {
+                    window.location.href = 'sbtissue.html'; 
+                });
+
+                document.getElementById('button2').addEventListener('click', () => {
+                    window.location.href = 'institueinfo.html'; 
+                });
             } else {
                 alert('Please install MetaMask.');
             }
@@ -150,10 +172,14 @@
                 return (
                     <div id="MetaMask">
                         <h2>Welcome to MetaMask Authentication</h2>
-                        <form>
+                        <div>
                             <label htmlFor="metamask">Connect with MetaMask to continue:</label>
                             <button id="loginButton">Login with MetaMask</button>
-                        </form>
+                        </div>
+                        <div class="additionalButtons">
+                            <button id="button1">SBT Issue</button>
+                            <button id="button2">Institute Info</button>
+                        </div>
                         <div id="userAddressMessage"></div>
                     </div>
                 );
