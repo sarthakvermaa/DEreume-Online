@@ -5,8 +5,9 @@ Welcome to the MetaMask Authentication demo! This project demonstrates how to in
 ## Getting Started
 
 1. Clone the repository:
-2. ```bash
+```bash
 git clone https://github.com/your-username/your-repository.git
+```
 
 3. Open the `index.html` file in a web browser or host it on a server.
 
